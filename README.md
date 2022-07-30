@@ -23,3 +23,7 @@ Este projeto tem como objetivo implementar uma aplicação web para o Controle d
 
 ## GitHub Address / Endereço de Deploy
 https://github.com/giozaccarelli/controle-tarefas-diarias
+
+
+## Versão inicial dos Protótipos de Telas da Aplicação
+https://www.figma.com/file/UXNFDkoE7DHbdyTO4GoPYU/controle-tarefas-diarias?node-id=0%3A1
