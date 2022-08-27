@@ -2,11 +2,13 @@
   <div class="main-container">
     <div class="main-items">
       <div class="row">
-        <img class="main-icon-logo" src="../assets/resources/images/logo.png" />
+        <img class="main-icon-logo" [src]="logoMenuImage" />
       </div>
       <div class="row">
         <p id="main-item-paragraph">Clique para prosseguir</p>
-        <button class="btn-rounded" id="btn-main-page">
+        <button
+          class="btn-rounded"
+          id="btn-main-page">
           <a routerLink="login">
             <i class="material-icons arrow-forward">arrow_forward</i>
           </a>
@@ -15,3 +17,7 @@
     </div>
   </div>
   <!--fim initial page-->
+  <!--exemplo passagem via @Input-->
+  <app-example-input-output [recebeUsuarios]="usuarios"
+    (respostaUsuarios)="receiverFeedback($event)"></app-example-input-output>
+  <!--fim exemplo-->

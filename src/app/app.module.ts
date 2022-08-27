@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EnterAppComponent } from './enter-app/enter-app.component';
 import { InitialPageComponent } from './initial-page/initial-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ExampleInputOutputComponent } from './example-input-output/example-input-output.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     FooterComponent,
     EnterAppComponent,
     InitialPageComponent,
-    MainPageComponent
+    MainPageComponent,
+    ExampleInputOutputComponent
   ],
   imports: [
     BrowserModule,
