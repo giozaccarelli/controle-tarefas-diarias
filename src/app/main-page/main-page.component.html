@@ -1,0 +1,57 @@
+  <!--main page-->
+  <div class="main-page">
+    <div class="row" id="main-row">
+      <h2 class="h2-main-page">Seja bem-vindo(a),
+        <span id="main-username"
+        style="background: -webkit-linear-gradient(90deg, rgba(161,39,232,1) 0%, rgba(107,138,232,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">
+          Fulano
+        </span>
+        ! :)</h2>
+      <h4 class="h4-main-page">Aqui você tem acesso à sua lista de tarefas diárias.</h4>
+      <br />
+      <h4 class="h4-main-page">O que você precisa fazer hoje?</h4>
+      <form class="input-field">
+        <input id="input-task" type="text" required />
+        <label for="input-task">
+          <span class="titulo-input">exemplo: </span>
+          <span class="exemplo-input">Organizar estante</span>
+        </label>
+      </form>
+      <br />
+      <h4 class="h4-main-page">Escolha uma categoria</h4>
+      <form class="input-field">
+        <div class="categories">
+          <div>
+            <input type="radio" id="pessoal" name="category" value="Pessoal" />
+            <label for="pessoal" class="label-main">Pessoal</label>
+          </div>
+          <div>
+            <input type="radio" name="category" id="profissional" value="Profissional" />
+            <label for="profissional" class="label-main">Profissional</label>
+          </div>
+        </div>
+      </form>
+      <br />
+      <h4 class="h4-main-page">Escolha a prioridade da tarefa</h4>
+      <form class="input-field">
+        <div class="priorities">
+          <div>
+            <label for="baixa">Baixa</label>
+          </div>
+          <div>
+            <label for="media">Média</label>
+          </div>
+          <div>
+            <label for="alta">Alta</label>
+          </div>
+        </div>
+      </form>
+      <br />
+      <button class="main-btn">
+        <a href="#">ADICIONAR TAREFA</a>
+      </button>
+    </div>
+  </div>
+  <!--fim main page-->

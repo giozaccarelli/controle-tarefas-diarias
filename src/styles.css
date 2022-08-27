@@ -20,6 +20,7 @@ body,
 html {
   font-family: 'Inter', sans-serif;
   background-color: #FEFEFE !important;
+  color: #444444;
 }
 
 .my-logo {
@@ -63,6 +64,15 @@ h4 {
   font-size: 1.5em;
 }
 
+.h2-main-page {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.h4-main-page {
+  font-size: 1.2em;
+}
+
 .main-container {
   height: 400px;
 
@@ -71,18 +81,103 @@ h4 {
   justify-content: center;
 }
 
+.main-page {
+  height: 600px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+#main-row {
+  padding: 30px 200px;
+}
+
+.categories,
+.priorities {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 100px;
+  align-content: space-between;
+}
+
+.categories > div,
+.priorities > div {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+  width: 200px;
+  padding: 10%;
+
+  text-align: center;
+
+  border-radius: 10%;
+  margin-left: 20px;
+}
+
+.priorities > div {
+  width: 150px;
+  padding: 2%;
+}
+
+.categories > div:first-child,
+.priorities > div:first-child {
+  margin-left: 0px;
+}
+
+.main-btn {
+  background: linear-gradient(50deg, rgba(107,136,232,1) 0%, rgba(161,39,232,1) 100%);
+
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+  width: 430px;
+  height: 40px;
+  margin-bottom: 5%;
+}
+
+.main-btn > a {
+  padding: 20px;
+
+  color: #FEFEFE;
+  font-size: 1em;
+}
+
+.main-items {
+  width: 500px;
+
+  padding: 10px;
+  text-align: center;
+}
+
+.main-item img {
+  height: 65px;
+}
+
+#main-item-paragraph {
+  color: #444444;
+
+  font-size: 1.2em;
+}
+
+#btn-main-page {
+  margin-top: -8%;
+  margin-right: 15%;
+}
+
 .enter-app-form {
   width: 500px;
 
   padding: 10px;
 }
 
-.exemplo,
-.exemplo-username {
+.titulo-input,
+.exemplo-input {
   color: #8E8E8E;
 }
 
-.exemplo-username {
+.exemplo-input {
   font-style: italic;
   font-weight: lighter;
 }
