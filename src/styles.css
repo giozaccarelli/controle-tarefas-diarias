@@ -49,3 +49,57 @@ footer {
 
   font-size: 0.75em;
 }
+
+h3, h4 {
+  color: #444444;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+.main-container {
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter-app-form {
+  width: 500px;
+
+  padding: 10px;
+}
+
+.exemplo,
+.exemplo-username {
+  color: #8E8E8E;
+}
+
+.exemplo-username {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.btn-rounded {
+  background: linear-gradient(90deg, rgba(161,39,232,1) 0%, rgba(107,136,232,1) 100%);
+
+  display: block;
+  width: 50px;
+  height: 50px;
+  float: right;
+
+  border-radius: 50%;
+
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-forward {
+  color: #FEFEFE;
+}
