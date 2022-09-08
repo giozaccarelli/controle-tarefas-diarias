@@ -14,5 +14,8 @@ export class Shared {
     localStorage.setItem(Constants.USERNAME_KEY, JSON.stringify(user));
     localStorage.setItem(Constants.USERS_KEY, JSON.stringify([]));
     localStorage.setItem(Constants.LOGGED_IN_KEY, String(false));
+
+    localStorage.removeItem(Constants.TASK_KEY);
+    localStorage.setItem(Constants.TASK_KEY, JSON.stringify([]));
   }
 }

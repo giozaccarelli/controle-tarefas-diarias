@@ -12,6 +12,7 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UserComponent } from './user/user.component';
 import { AcessarAppComponent } from './acessar-app/acessar-app.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AcessarAppComponent } from './acessar-app/acessar-app.component';
     InitialPageComponent,
     MainPageComponent,
     UserComponent,
-    AcessarAppComponent
+    AcessarAppComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
