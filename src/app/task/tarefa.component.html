@@ -1,0 +1,25 @@
+<h4>Tarefas</h4>
+<table class="highlight responsible-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Categoria</th>
+        <th>Prioridade</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of this.tasks">
+          <td>{{ t.titulo }}</td>
+          <td>{{ t.categoria }}</td>
+          <td>{{ t.prioridade }}</td>
+          <td class="right">
+            <a><i class="material-icons my-icon-size" (click)="onEdit(t)">
+              edit
+            </i></a>
+            <a><i class="material-icons my-icon-size" (click)="onDelete(t.titulo)">
+              delete
+            </i></a>
+          </td>
+        </tr>
+    </tbody>
+  </table>

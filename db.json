@@ -1,0 +1,32 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "titulo": "Organizar estante",
+      "categoria": "Pessoal",
+      "prioridade": "Baixa",
+      "usuario": "gio.zaccarelli"
+    },
+    {
+      "id": 2,
+      "titulo": "Realizar tarefa de Frameworks",
+      "categoria": "Profissional",
+      "prioridade": "Alta",
+      "usuario": "gio.zaccarelli"
+    },
+    {
+      "id": 3,
+      "titulo": "Caminhar ao ar livre",
+      "categoria": "Pessoal",
+      "prioridade": "Baixa",
+      "usuario": "gio.zaccarelli"
+    },
+    {
+      "id": 4,
+      "titulo": "Testar API",
+      "categoria": "Profissional",
+      "prioridade": "Media",
+      "usuario": "gio.zaccarelli"
+    }
+  ]
+}
