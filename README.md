@@ -15,7 +15,7 @@ Este projeto tem como objetivo implementar uma aplicação web para o Controle d
 - [x] Validar campos do formulário com REGEX e apresentar os erros.
 - [x] Desabilitar o botão de submit enquanto o formulário está inválido.
 - [x] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
-- [ ] Cadastrar uma entidade no JSON Server.
+- [x] Cadastrar uma entidade no JSON Server.
 - [ ] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf
 - [ ] Formatar a apresentação de dados com Pipes.
