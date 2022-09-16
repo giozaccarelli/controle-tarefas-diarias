@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constants } from '../util/constants';
 import { Tarefa } from '../model/tarefa';
 import { TarefaService } from './tarefa.service';
+import { TarefaPromiseService } from '../services/tarefa-promise.service';
 import { User } from '../model/user';
 import { WebStorageUtil } from '../util/web-storage-util';
 
@@ -15,11 +16,24 @@ export class TarefaComponent implements OnInit {
   tarefa!: Tarefa;
   tarefas?: Tarefa[];
 
-  constructor(private tarefaService: TarefaService) { }
+  constructor(private tarefaService: TarefaService,
+    private tarefaPromiseService: TarefaPromiseService) { }
 
   ngOnInit(): void {
     this.tarefa = new Tarefa('', '', '', '');
-    this.tarefas = this.tarefaService.getTasks();
+
+    this.tarefaPromiseService
+      .getByTaskTitle(this.tarefa.titulo)
+      .then((t: Tarefa[] = []) => {
+        this.tarefa = t[0];
+        localStorage.setItem(Constants.TAREFA_KEY, JSON.stringify(this.tarefa));
+        console.log(t);
+        this.tarefas = t;
+        }
+      )
+      .catch((e) => {
+        this.tarefa = WebStorageUtil.get(Constants.TAREFA_KEY);
+      });
   }
 
   onEdit(tarefa: Tarefa) {

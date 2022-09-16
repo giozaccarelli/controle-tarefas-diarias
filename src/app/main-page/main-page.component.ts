@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Constants } from '../util/constants';
 import { Tarefa } from '../model/tarefa';
 import { TarefaService } from '../task/tarefa.service';
-import { TarefaPromiseService } from '../services/tarefa-promise.service';
 import { User } from '../model/user';
 import { WebStorageUtil } from '../util/web-storage-util';
 import { Shared } from '../util/shared';
@@ -28,26 +27,13 @@ export class MainPageComponent implements OnInit, AfterViewInit {
 
   constructor(
     private tarefaService: TarefaService,
-    private tarefaPromiseService: TarefaPromiseService,
     private activatedRoute: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
     Shared.initalizeWebStorage();
-    const user = WebStorageUtil.get(Constants.USERNAME_KEY) as User;
     this.tarefa = new Tarefa('', '', '', this.nomeUsuario);
     this.tarefas = this.tarefaService.getTasks();
-
-    this.tarefaPromiseService
-      .getByTaskTitle(Constants.TAREFA_KEY)
-      .then((t: Tarefa[] = []) => {
-        this.tarefa = t[0];
-        localStorage.setItem(Constants.TAREFA_KEY, JSON.stringify(this.tarefa));
-        }
-      )
-      .catch((e) => {
-        this.tarefa = WebStorageUtil.get(Constants.TAREFA_KEY);
-      })
   }
 
   onSubmit() {
