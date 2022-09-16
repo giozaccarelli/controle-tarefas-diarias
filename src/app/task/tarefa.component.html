@@ -9,9 +9,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let t of this.tarefas">
-          <td>{{ t.titulo }}</td>
-          <td>{{ t.categoria }}</td>
-          <td>{{ t.prioridade }}</td>
+          <td>{{ t.titulo | titlecase }}</td>
+          <td>{{ t.categoria | titlecase }}</td>
+          <td>{{ t.prioridade | titlecase }}</td>
           <td class="right">
             <a><i class="material-icons my-icon-size" (click)="onEdit(t)">
               edit
