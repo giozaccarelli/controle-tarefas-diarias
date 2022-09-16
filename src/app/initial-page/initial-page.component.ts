@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./initial-page.component.css']
 })
 export class InitialPageComponent implements OnInit {
-  logoMenuImage: string = '../../assets/resources/images/logo.png';
+  logoMenuImage: string = 'assets/resources/images/logo.png';
   usuarios: Object[];
 
   constructor() {

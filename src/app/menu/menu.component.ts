@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  logoMenuImage: string = '../../assets/resources/images/logo.png';
+  logoMenuImage: string = 'assets/resources/images/logo.png';
 
   constructor() { }
 
