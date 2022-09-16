@@ -22,7 +22,7 @@ Este projeto tem como objetivo implementar uma aplicação web para o Controle d
 - [x] Build e deploy da aplicação.
 
 ## GitHub Address / Endereço de Deploy
-https://github.com/giozaccarelli/controle-tarefas-diarias
+https://giozaccarelli.github.io/controle-tarefas-diarias/
 
 
 ## Versão inicial dos Protótipos de Telas da Aplicação
