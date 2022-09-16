@@ -1,4 +1,6 @@
 {
   "/tarefas": "/tasks",
-  "/tarefas/:titulo":  "/tasks?titulo=:titulo"
+  "/tarefas/:titulo":  "/tasks?titulo=:titulo",
+  "/usuarios/": "/users",
+  "/usuarios/:username": "/usuarios?username=:username"
 }

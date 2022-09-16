@@ -58,5 +58,57 @@
       "prioridade": "Media",
       "usuario": "gio.zaccarelli"
     }
+  ],
+  "usuarios": [
+    {
+      "name": "José da Silva",
+      "username": "jose.silva",
+      "password": "qwerty",
+      "cpf": "123.456.789-10",
+      "birthday": "18/01/1970",
+      "tarefas": {}
+    },
+    {
+      "name": "Otavio Souza",
+      "username": "otavio.souza",
+      "password": "qwerty",
+      "cpf": "123.456.789-10",
+      "birthday": "20/03/2000",
+      "tarefas": {}
+    },
+    {
+      "name": "Bruna Oliveira",
+      "username": "bruna.oliveira",
+      "password": "qwerty",
+      "cpf": "123.456.789-10",
+      "birthday": "30/08/1986",
+      "tarefas": {}
+    }
+  ],
+  "users": [
+    {
+      "name": "José da Silva",
+      "username": "jose.silva",
+      "password": "qwerty",
+      "cpf": "123.456.789-10",
+      "birthday": "18/01/1970",
+      "tarefas": {}
+    },
+    {
+      "name": "Otavio Souza",
+      "username": "otavio.souza",
+      "password": "qwerty",
+      "cpf": "123.456.789-10",
+      "birthday": "20/03/2000",
+      "tarefas": {}
+    },
+    {
+      "name": "Bruna Oliveira",
+      "username": "bruna.oliveira",
+      "password": "qwerty",
+      "cpf": "123.456.789-10",
+      "birthday": "30/08/1986",
+      "tarefas": {}
+    }
   ]
 }
