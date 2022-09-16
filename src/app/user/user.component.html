@@ -115,6 +115,19 @@
         <i class="material-icons right">send</i>
       </button>
     </form>
+    <div class="row">
+      <h4>Lista de usuários cadastrados na API</h4>
+      <table>
+        <tr>
+          <th>Nome</th>
+          <th>Username</th>
+        </tr>
+        <tr *ngFor="let u of this.responseUsers | async">
+          <td>{{ u.name }}</td>
+          <td>{{ u.username }} </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
 <!--fim user-->

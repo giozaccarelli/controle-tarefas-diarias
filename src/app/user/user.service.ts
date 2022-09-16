@@ -1,4 +1,6 @@
 import { Constants } from "../util/constants";
+import { Observable } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { User } from "../model/user";
 import { WebStorageUtil } from "../util/web-storage-util";
@@ -8,8 +10,10 @@ import { WebStorageUtil } from "../util/web-storage-util";
 })
 
 export class UserService {
+  public url = "http://localhost:3000/usuarios";
+
   users!: User[];
-  constructor() {
+  constructor(private http: HttpClient) {
     this.users = WebStorageUtil.get(Constants.USERS_KEY);
   }
 
@@ -49,5 +53,9 @@ export class UserService {
   getUsers(): User[] {
     this.users = WebStorageUtil.get(Constants.USERS_KEY);
     return this.users;
+  }
+
+  getUsersFromApi(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 }

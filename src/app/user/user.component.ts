@@ -7,6 +7,7 @@ import { Shared } from '../util/shared';
 import { User } from '../model/user';
 import { UserService } from './user.service';
 import { WebStorageUtil } from '../util/web-storage-util';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user',
@@ -27,12 +28,15 @@ export class UserComponent implements OnInit {
   isSuccess!: boolean;
   message!: string;
 
+  responseUsers?: Observable<any> | any;
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     Shared.initalizeWebStorage();
     this.user = new User('', '');
     this.users = this.userService.getUsers();
+    this.responseUsers = this.userService.getUsersFromApi();
   }
 
   onSubmit() {
