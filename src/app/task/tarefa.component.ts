@@ -34,6 +34,8 @@ export class TarefaComponent implements OnInit {
       .catch((e) => {
         this.tarefa = WebStorageUtil.get(Constants.TAREFA_KEY);
       });
+
+      this.tarefas = this.tarefaService.getTasks();
   }
 
   onEdit(tarefa: Tarefa) {
