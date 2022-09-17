@@ -1,0 +1,120 @@
+<!--main page-->
+<div class="row">
+  <div class="col s12">
+    <h2 class="h2-main-page">Seja bem-vindo(a),
+      <span id="main-username"
+      style="background: -webkit-linear-gradient(90deg, rgba(161,39,232,1) 0%, rgba(107,138,232,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;">
+        {{ nomeUsuario }}
+      </span>
+      ! :)</h2>
+    <h4 class="h4-main-page">Aqui você tem acesso à sua lista de tarefas diárias.</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12">
+    <form class="input-field col s8" #form="ngForm" (submit)="onSubmit()">
+      <div class="row">
+        <h4 class="h4-main-page">O que você precisa fazer hoje?</h4>
+        <div class="input-field col s12">
+          <input
+            id="input-task"
+            name="input-task"
+            type="text"
+            [(ngModel)]="this.tarefa.titulo"
+            #titulo="ngModel"
+            required />
+          <label for="input-task">
+            <span class="titulo-input">exemplo: </span>
+            <span class="exemplo-input">Organizar estante</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4 class="h4-main-page">Escolha uma categoria</h4>
+        <div class="col s6">
+          <label>
+            <input type="radio"
+            name="category"
+            value="Pessoal"
+            [(ngModel)]="this.tarefa.categoria"
+            #categoria="ngModel" />
+            <span>Pessoal</span>
+          </label>
+        </div>
+        <div class="col s6">
+          <label>
+            <input type="radio"
+            name="category"
+            value="Profissional"
+            [(ngModel)]="this.tarefa.categoria"
+            #categoria="ngModel" />
+            <span>Profissional</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4 class="h4-main-page">Escolha a prioridade da tarefa</h4>
+        <div class="col s4">
+          <label>
+            <input type="radio"
+            name="priority"
+            value="Baixa"
+            [(ngModel)]="this.tarefa.prioridade"
+            #prioridade="ngModel" />
+            <span>Baixa</span>
+          </label>
+        </div>
+        <div class="col s4">
+          <label>
+            <input type="radio"
+            name="priority"
+            value="Média"
+            [(ngModel)]="this.tarefa.prioridade"
+            #prioridade="ngModel" />
+            <span>Média</span>
+          </label>
+        </div>
+        <div class="col s4">
+          <label>
+            <input type="radio"
+            name="priority"
+            value="Alta"
+            [(ngModel)]="this.tarefa.prioridade"
+            #prioridade="ngModel" />
+            <span>Alta</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <button class="btn-gradient z-depth-4"
+          *ngIf="!this.submitted"
+          (click)="this.onButtonClick(); this.onButtonClickAgain()">
+          ADICIONAR TAREFA
+          </button>
+          <button class="btn-gradient z-depth-4"
+          *ngIf="this.submitted"
+          (click)="this.onClickResetForm()">
+          LIMPAR
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <button class="btn-gradient depth-4"
+          *ngIf="!this.submitted || this.submitted">
+          <a routerLink="lista-tarefas">
+            VER LISTA DE TAREFAS
+          </a>
+        </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!--fim main page-->

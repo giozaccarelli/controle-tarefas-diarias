@@ -1,0 +1,49 @@
+<!--acessar-app-->
+<div class="main-container">
+  <div class="enter-app-form">
+    <div class="row">
+      <div class="col s12">
+        <h3>Olá,</h3>
+        <h4>Informe seus dados para prosseguir</h4>
+      </div>
+
+      <form class="input-field col s8" (ngSubmit)="onLogin()">
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="input-username"
+              name="input-username"
+              class="validate"
+              type="text"
+              [(ngModel)]="this.loginUser.username"
+              required />
+            <label for="input-username">
+              <span class="titulo-input">Nome de Usuário </span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              id="input-password"
+              name="input-password"
+              class="validate"
+              type="password"
+              [(ngModel)]="this.loginUser.password"
+              required />
+            <label for="input-password">
+              <span class="titulo-input">Senha</span>
+            </label>
+          </div>
+        </div>
+
+        <button
+          class="btn-gradient z-depth-4"
+          type="submit">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<!--fim acessar-app-->
